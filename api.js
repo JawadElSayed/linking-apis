@@ -27,3 +27,16 @@ fetch(age_file)
     document.getElementById("age").innerHTML = age
     document.getElementById("age_count").innerHTML = count
 });
+
+fetch(nationality_file)
+.then (x => x.json())
+.then (nationality => {
+    nationality_1 = nationality.country[0].country_id
+    probabilty_1 = nationality.country[0].probability
+    nationality_2 = nationality.country[1].country_id
+    probabilty_2 = nationality.country[1].probability
+    document.getElementById("country1").innerHTML = nationality_1
+    document.getElementById("nationality_probability1").innerHTML = probabilty_1
+    document.getElementById("country2").innerHTML = nationality_2
+    document.getElementById("nationality_probability2").innerHTML = probabilty_2
+});
