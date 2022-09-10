@@ -1,9 +1,19 @@
 
+const img1 = document.getElementById("dog_image1");
+const img2 = document.getElementById("dog_image2");
+const image_file = "https://dog.ceo/api/breeds/image/random";
+
+fetch(image_file)
+.then (x => x.json())
+.then (image => {
+    img1.src = image.message;
+    img2.src = image.message;
+});
+
 const submite = (element) => {
     element.addEventListener('click', (event) => {
         const name = document.getElementById("input").value;
 
-        const image = "https://dog.ceo/api/breeds/image/random";
         const gender_file = "https://api.genderize.io/?name=" + name; 
         const age_file = "https://api.agify.io/?name=" + name;
         const nationality_file = "https://api.nationalize.io/?name=" + name;

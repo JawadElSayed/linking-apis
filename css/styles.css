@@ -3,11 +3,39 @@ body{
     margin: 0;
 }
 
-img {
+/* header */
+
+.header_img {
     width: 100%;
 }
 
-/* header */
+.dog_img1 {
+    position: absolute;
+    top: 7%;
+    left: 15%;
+    transform: translate(-50%, 0);
+}
+
+.dog_img1 > img {
+    margin: auto;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+}
+
+.dog_img2 {
+    position: absolute;
+    top: 7%;
+    left: 85%;
+    transform: translate(-50%, 0);
+}
+
+.dog_img2 > img {
+    margin: auto;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+}
 
 .header {
     position: relative;
@@ -17,7 +45,7 @@ img {
 
 .title {
     position: absolute;
-    top: 10%;
+    top: 12%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 5vw;
