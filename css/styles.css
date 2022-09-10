@@ -112,6 +112,8 @@ body{
     border: none;
 }
 
+/* responding to screens */
+
 @media screen and (max-width: 750px) {
     .name{
         font-size: 3vh;
