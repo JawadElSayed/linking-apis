@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linking apis</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- starting header -->
+    <header class="header">
+        <img class="header_img" src="images/header.jpg" alt="">
+        <h1 class="title">Prediction Website</h1>
+        <div class="dog_img1">
+            <img id="dog_image1">
+        </div>
+        <div class="dog_img2">
+            <img id="dog_image2">
+        </div>
+    </header>
+    <!-- ending header -->
+
+    <!-- starting input form -->
+    <form action="" class="form">
+        <label for="name" class="label">Enter your name:</label><br>
+        <input type="text" class="input" id="input" placeholder="Name"><br>
+        <button type="button" id="submit" class="submit">Submit</button>
+    </form>
+    <!-- ending input form -->
+
+    <!-- starting presentation -->
+    <section class="presentation">
+        <div class="name">
+            <p id="name">Name: </p>
+        </div>
+        <div class="stat">
+            <div class="gender">
+                <p id="gender">Gender: </p>
+                <p id="gender_probability">Probability: </p>
+                <p id="gender_count">Count: </p>
+            </div>
+            <div class="age">
+                <p id="age">Age: </p>
+                <p id="age_count">Count: </p>
+            </div>
+            <div class="nationality">
+                <p id="country1">Country 1: </p>
+                <p id="nationality_probability1">Probability: </p>
+            </div>
+            <div>
+                <p id="country2">Country 2: </p>
+                <p id="nationality_probability2">Probability: </p>
+            </div>
+        </div>
+    </section>
+    <!-- starting presentation -->
+
+    <!-- script part -->
+    <script src="js/api.js"></script>
+</body>
+</html>
