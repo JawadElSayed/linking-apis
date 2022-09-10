@@ -86,13 +86,13 @@ body{
 /* presentation */
 
 .presentation {
-    font-size: 1.75vw;
+    font-size: 3vh;
 }
 
 .name {
     text-align: center;
     border-bottom: 3px dashed #00000080 ;
-    font-size: 2vw;
+    font-size: 5vh;
 }
 
 .stat {
@@ -112,3 +112,20 @@ body{
     border: none;
 }
 
+@media screen and (max-width: 750px) {
+    .name{
+        font-size: 3vh;
+    }
+
+    .stat {
+        flex-direction: column;
+        padding: 0; 
+    }
+    .stat > div {
+        width: 100%;
+        border: none;
+        border-bottom: 5px double #00000080;
+        padding-left: 5vw;
+    }
+    
+}
