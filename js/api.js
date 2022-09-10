@@ -18,17 +18,17 @@ const submite = (element) => {
         const age_file = "https://api.agify.io/?name=" + name;
         const nationality_file = "https://api.nationalize.io/?name=" + name;
 
-        document.getElementById("name").append(name);
+        document.getElementById("name").innerHTML = "Name: " + name;
 
         fetch(gender_file)
         .then (x => x.json())
         .then (gender => {
             gender_type = gender.gender;
-            probabilty = gender.probability;
+            probabilty = Math.round(gender.probability * 100); 
             count = gender.count;
-            document.getElementById("gender").append(gender_type);
-            document.getElementById("gender_probability").append(probabilty);
-            document.getElementById("gender_count").append(count);
+            document.getElementById("gender").innerHTML = "Gender: " + gender_type;
+            document.getElementById("gender_probability").innerHTML = "Probability: " + probabilty + "%";
+            document.getElementById("gender_count").innerHTML = "Count: " + count;
         });
 
         fetch(age_file)
@@ -36,21 +36,21 @@ const submite = (element) => {
         .then (ages => {
             age = ages.age;
             count = ages.count;
-            document.getElementById("age").append(age);
-            document.getElementById("age_count").append(count);
+            document.getElementById("age").innerHTML = "Age: " + age;
+            document.getElementById("age_count").innerHTML = "Count: " + count;
         });
 
         fetch(nationality_file)
         .then (x => x.json())
         .then (nationality => {
             nationality_1 = nationality.country[0].country_id;
-            probabilty_1 = nationality.country[0].probability;
+            probabilty_1 = Math.round(nationality.country[0].probability * 100); 
             nationality_2 = nationality.country[1].country_id;
-            probabilty_2 = nationality.country[1].probability;
-            document.getElementById("country1").append(nationality_1);
-            document.getElementById("nationality_probability1").append(probabilty_1);
-            document.getElementById("country2").append(nationality_2);
-            document.getElementById("nationality_probability2").append(probabilty_1);
+            probabilty_2 = Math.round(nationality.country[1].probability * 100); 
+            document.getElementById("country1").innerHTML = "Country 1: " + nationality_1;
+            document.getElementById("nationality_probability1").innerHTML = "Probability: " + probabilty_1 + "%";
+            document.getElementById("country2").innerHTML = "Country 2: " + nationality_2;
+            document.getElementById("nationality_probability2").innerHTML = "Probability: " + probabilty_2 + "%";
         });
     })
 }
