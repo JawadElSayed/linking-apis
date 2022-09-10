@@ -26,9 +26,9 @@ const submite = (element) => {
             gender_type = gender.gender;
             probabilty = gender.probability;
             count = gender.count;
-            document.getElementById("gender").innerHTML = gender_type;
-            document.getElementById("gender_probability").innerHTML = probabilty;
-            document.getElementById("gender_count").innerHTML = count;
+            document.getElementById("gender").append(gender_type);
+            document.getElementById("gender_probability").append(probabilty);
+            document.getElementById("gender_count").append(count);
         });
 
         fetch(age_file)
@@ -36,8 +36,8 @@ const submite = (element) => {
         .then (ages => {
             age = ages.age;
             count = ages.count;
-            document.getElementById("age").innerHTML = age;
-            document.getElementById("age_count").innerHTML = count;
+            document.getElementById("age").append(age);
+            document.getElementById("age_count").append(count);
         });
 
         fetch(nationality_file)
@@ -47,10 +47,10 @@ const submite = (element) => {
             probabilty_1 = nationality.country[0].probability;
             nationality_2 = nationality.country[1].country_id;
             probabilty_2 = nationality.country[1].probability;
-            document.getElementById("country1").innerHTML = nationality_1;
-            document.getElementById("nationality_probability1").innerHTML = probabilty_1;
-            document.getElementById("country2").innerHTML = nationality_2;
-            document.getElementById("nationality_probability2").innerHTML = probabilty_1;
+            document.getElementById("country1").append(nationality_1);
+            document.getElementById("nationality_probability1").append(probabilty_1);
+            document.getElementById("country2").append(nationality_2);
+            document.getElementById("nationality_probability2").append(probabilty_1);
         });
     })
 }
