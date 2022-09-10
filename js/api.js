@@ -1,7 +1,6 @@
 
 const submite = (element) => {
     element.addEventListener('click', (event) => {
-        console.log("jawad")
         const name = document.getElementById("input").value;
 
         const image = "https://dog.ceo/api/breeds/image/random";

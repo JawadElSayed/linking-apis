@@ -1,0 +1,18 @@
+
+img {
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+}
+
+.title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+}
